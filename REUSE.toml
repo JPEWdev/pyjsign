@@ -4,6 +4,7 @@ version = 1
 path = [
     "AGENTS.md",
     "README.md",
+    "posts/SPDX.md",
     ".gitignore",
 ]
 SPDX-License-Identifier = "Apache-2.0"

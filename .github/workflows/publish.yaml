@@ -37,5 +37,13 @@ jobs:
       - name: Build package
         run: python -m build
 
+      - name: Embed SBOM into the wheel
+        id: pitloom
+        uses: bact/pitloom@e60da7aeefb3c78add01c9fd4d140b38dace84d5 # v0.23.4
+        with:
+          embed-wheel: "dist/*.whl"
+          extras: "content-type"
+          content-type: "true"
+
       - name: Publish distribution to PyPI
         uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
